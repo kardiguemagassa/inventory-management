@@ -1,0 +1,47 @@
+
+### Créer un produit
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Samsung Galaxy S25",
+  "description": "Smartphone Samsung",
+  "price": 899.99,
+  "quantity": 15,
+  "categoryId": 1,
+  "supplierId": 1
+}
+
+### Récupérer tous les produits
+GET http://localhost:8080/api/products
+
+### Récupérer un produit par ID
+GET http://localhost:8080/api/products/1
+
+### Rechercher un produit par nom
+GET http://localhost:8080/api/products/search?name=Samsung
+
+### Filtrer par catégorie
+GET http://localhost:8080/api/products/category/1
+
+### Filtrer par fournisseur
+GET http://localhost:8080/api/products/supplier/1
+
+### Filtrer par intervalle de prix
+GET http://localhost:8080/api/products/price-range?min=500&max=1000
+
+### Modifier un produit
+PUT http://localhost:8080/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Samsung Galaxy S25",
+  "description": "Smartphone Samsung - 256 Go",
+  "price": 849.99,
+  "quantity": 20,
+  "categoryId": 1,
+  "supplierId": 1
+}
+
+### Supprimer un produit
+DELETE http://localhost:8080/api/products/1
