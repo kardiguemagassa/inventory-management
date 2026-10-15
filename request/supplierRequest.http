@@ -1,0 +1,28 @@
+### Créer un fournisseur
+POST http://localhost:8080/api/suppliers
+Content-Type: application/json
+
+{
+  "name": "Samsung",
+  "email": "contact@samsung.com",
+  "phone": "0123456789"
+}
+
+### Récupérer tous les fournisseurs
+GET http://localhost:8080/api/suppliers
+
+### Récupérer un fournisseur par ID
+GET http://localhost:8080/api/suppliers/1
+
+### Modifier un fournisseur
+PUT http://localhost:8080/api/suppliers/1
+Content-Type: application/json
+
+{
+  "name": "Samsung Electronics",
+  "email": "support@samsung.com",
+  "phone": "0198765432"
+}
+
+### Supprimer un fournisseur
+DELETE http://localhost:8080/api/suppliers/1
